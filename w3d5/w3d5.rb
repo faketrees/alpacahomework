@@ -34,7 +34,7 @@ def bfs(starting_node, target_value)
 
     until queue.empty?
         node = queue.shift
-    unless visited.include?(node)
+    if !visited.include?(node)
       return node.val if node.val == target_value
       visited << node
       queue += node.neighbors
