@@ -54,6 +54,9 @@ def dfs(starting_node, target_value)
     nil
 end
 
+#visualization of this DFS implementation
+#https://miro.medium.com/max/1000/1*UGoV21qO6N8JED-ozsbXWw.gif
+
 
 p bfs(a, "f")
 p bfs(a, "b")
