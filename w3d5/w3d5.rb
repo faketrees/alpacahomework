@@ -43,6 +43,20 @@ def bfs(starting_node, target_value)
  return nil
 end
 
+def dfs(starting_node, target_value)
+    return nil if starting_node == nil
+    return starting_node if starting_node.val == target_value
+
+    starting_node.neighbors.each do |sub|
+        search_result = dfs(sub, target_value)
+        return search_result.val unless search_result.nil?
+    end
+    nil
+end
+
 
 p bfs(a, "f")
 p bfs(a, "b")
+
+# p dfs(a, "f")
+p dfs(a, "b")
